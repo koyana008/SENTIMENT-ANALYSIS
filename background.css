@@ -1,0 +1,59 @@
+def set_background():
+    st.markdown(
+        """
+        <style>
+        /* App Background */
+        .stApp {
+            background: linear-gradient(135deg, #ffe3ec, #ffc8dd, #b8c0ff, #bde0fe, #a2d2ff);
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+            font-family: 'Poppins', sans-serif;
+            color: #222;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Header Styling */
+        h1, h2, h3, h4 {
+            color: #2b2d42;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+        }
+
+        /* Glass Effect on Boxes */
+        .css-1d391kg, .css-1kyxreq, .css-1v0mbdj {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Button Styling */
+        .stButton>button {
+            background: linear-gradient(to right, #5f0f40, #9a031e);
+            color: white;
+            font-weight: bold;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .stButton>button:hover {
+            background: linear-gradient(to right, #9a031e, #5f0f40);
+            transform: scale(1.05);
+        }
+
+        /* Text Area + File Uploader Enhancements */
+        textarea, .stTextInput>div>div>input, .stFileUploader {
+            border-radius: 12px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
